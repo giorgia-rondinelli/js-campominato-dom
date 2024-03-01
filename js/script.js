@@ -51,7 +51,7 @@ function generateSquare(num){
     }
   else if(listaBombs.includes(num)){
     this.classList.add('red')
-    messaggio.innerHTML+=`Hai perso.<br> Il tuo punteggio è di ${counter} su 100`
+    messaggio.innerHTML+=`Hai perso.<br> Il tuo punteggio è di ${counter-1} su 100`
     
   }
   else{
