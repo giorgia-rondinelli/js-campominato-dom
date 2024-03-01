@@ -1,0 +1,46 @@
+.wrap-container{
+  background-color: aquamarine;
+  height: 550px;
+  width: 550px;
+}
+
+.square{
+  height: 55px;
+  width: 55px;
+  background-color: rgb(205, 179, 12) ;
+  border: 1px solid black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.square2{
+  height: 60px;
+  width: 60px;
+  background-color: rgb(205, 179, 12) ;
+  border: 1px solid black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.square3{
+  height: 75px;
+  width: 75px;
+  background-color: rgb(205, 179, 12) ;
+  border: 1px solid black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blue{
+  background-color: rgb(109, 151, 229);
+}
+
+.red{
+  background-color: rgba(243, 77, 16, 0.822);
+}
+
+
+
