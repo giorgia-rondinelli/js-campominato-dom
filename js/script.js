@@ -113,6 +113,7 @@ function generateBomb(){
 
 function difficolta2(){
   reset()
+  generateBomb()
    for(let i=1; i<=81; i++){
  const square2=generateSquare2(i)
  container.append(square2)
@@ -123,6 +124,7 @@ function difficolta2(){
 
 function difficolta3(){
     reset()
+    generateBomb()
      for(let i=1; i<=49; i++){
    const square=generateSquare3(i)
    container.append(square)
@@ -137,6 +139,20 @@ function generateSquare2(num){
   cell.addEventListener('click', function(){
     console.log(num)
     this.classList.add('blue')
+    if (counter>=81-listaBombs.length){
+      counter++
+      messaggio.innerHTML+=`hai vinto`
+    }
+  else if(listaBombs.includes(num)){
+    this.classList.add('red')
+    messaggio.innerHTML+=`Hai perso.<br> Il tuo punteggio è di ${counter-1} su 100`
+    
+  }
+  else{
+    console.log(counter)
+    counter++
+  }
+  
   }) 
   
   return cell}
@@ -151,6 +167,19 @@ function generateSquare2(num){
     cell.addEventListener('click', function(){
       console.log(num)
       this.classList.add('blue')
+      if (counter>=81-listaBombs.length){
+        counter++
+        messaggio.innerHTML+=`hai vinto`
+      }
+    else if(listaBombs.includes(num)){
+      this.classList.add('red')
+      messaggio.innerHTML+=`Hai perso.<br> Il tuo punteggio è di ${counter-1} su 100`
+      
+    }
+    else{
+      console.log(counter)
+      counter++
+    }
     }) 
     
     return cell}
