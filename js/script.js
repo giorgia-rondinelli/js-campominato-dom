@@ -113,7 +113,7 @@ function generateBomb(){
 
 function difficolta2(){
   reset()
-  generateBomb()
+  generateBomb2()
    for(let i=1; i<=81; i++){
  const square2=generateSquare2(i)
  container.append(square2)
@@ -124,7 +124,7 @@ function difficolta2(){
 
 function difficolta3(){
     reset()
-    generateBomb()
+    generateBomb3()
      for(let i=1; i<=49; i++){
    const square=generateSquare3(i)
    container.append(square)
@@ -145,8 +145,7 @@ function generateSquare2(num){
     }
   else if(listaBombs.includes(num)){
     this.classList.add('red')
-    messaggio.innerHTML+=`Hai perso.<br> Il tuo punteggio è di ${counter-1} su 100`
-    
+    messaggio.innerHTML+=`Hai perso.<br> Il tuo punteggio è di ${counter-1} su 81`
   }
   else{
     console.log(counter)
@@ -156,6 +155,23 @@ function generateSquare2(num){
   }) 
   
   return cell}
+
+
+  function generateBomb2(){
+
+    const numBombs= 16
+    do{
+    const numeroRandom= Math.ceil(Math.random()*81)
+    console.log(numeroRandom)
+    if(listaBombs.includes(numeroRandom)){
+    numeroRandom}
+    else{ listaBombs.push(numeroRandom)
+    console.log(listaBombs)}
+   
+    }
+    while(listaBombs.length<numBombs)
+    return listaBombs
+  }
 
 
   
@@ -173,7 +189,8 @@ function generateSquare2(num){
       }
     else if(listaBombs.includes(num)){
       this.classList.add('red')
-      messaggio.innerHTML+=`Hai perso.<br> Il tuo punteggio è di ${counter-1} su 100`
+
+      messaggio.innerHTML+=`Hai perso.<br> Il tuo punteggio è di ${counter-1} su 49`
       
     }
     else{
@@ -183,3 +200,19 @@ function generateSquare2(num){
     }) 
     
     return cell}
+
+    function generateBomb3(){
+
+      const numBombs= 16
+      do{
+      const numeroRandom= Math.ceil(Math.random()*49)
+      console.log(numeroRandom)
+      if(listaBombs.includes(numeroRandom)){
+      numeroRandom}
+      else{ listaBombs.push(numeroRandom)
+      console.log(listaBombs)}
+     
+      }
+      while(listaBombs.length<numBombs)
+      return listaBombs
+    }
